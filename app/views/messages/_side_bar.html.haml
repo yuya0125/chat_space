@@ -1,19 +1,24 @@
-.chat-side
+.side_bar
   .side-header
-   .saide-header_box
-    %p.side-header_box_username
-      yuya
-    %ul.side-header_box_menu
-      %li.side-header_box_edit-header_box_username
-          =link_to"#"do
-           =icon("fas","edit")
-      %li.side-header_box_new-gruop 
-          =link_to "#"do
-           =icon("fas","cog")
+    .side-header__box
+      %p.side-header__box__user-name 11
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__new-group
+          %a{:href => "/groups/new"}
+            %i.fas.fa-edit
+        %li.side-header__box__menu__edit-user
+          %a{:href => "/users/19448/edit"}
+            %i.fas.fa-cog
   .groups
-   = link_to"#",%class"group"%do
-     %p.group_group-name
-       test
-     %p.group_latest-messege
+    %a{:href => "/groups/24906/messages"}
+      .group
+        %p.group__group-name 73期
+        %p.group__latest-message まだメッセージがありません
+
+
+
+
+
+          
 
      
