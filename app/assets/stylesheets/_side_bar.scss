@@ -18,11 +18,7 @@
     width: 100%;
     font-weight: bold;
     &__p {
-    // display: block;
-    // margin-block-start: 1em;
-    // margin-block-end: 1em;
-    // margin-inline-start: 0px;
-    // margin-inline-end: 0px;
+      
     } 
     &__menu{
       display: flex;
@@ -58,13 +54,6 @@ a {
   overflow: scroll;
 }
 
-
-ul {
-  // margin-block-start: 1em;
-//   margin-block-end: 1em;
-//   margin-inline-start: 0px;
-//   margin-inline-end: 0px;
-}
 
 .side-header__box__menu li {
   margin-left: 5px;
