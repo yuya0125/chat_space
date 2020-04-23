@@ -11,15 +11,19 @@
           = link_to edit_user_path(current_user) do
             %i.fas.fa-cog
   .groups
-    = link_to "/groups/24906/messages"  do
-      .group
-        %p.groups__group__group-name 73期
-        %p.groups__group__latest-message まだメッセージがありません
-
-
-
-
-
+    - current_user.groups.each do |group|
+      = link_to group_messages_path(group) do
+        .group
+          %p.groups__group__group-name 
+            = group.name
+          %p.groups__group__latest-message 
+            まだメッセージがありません
           
+
+
+
+
+
+               
 
      
