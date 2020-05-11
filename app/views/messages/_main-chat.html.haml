@@ -6,10 +6,10 @@
       %ul.main-header__left-box__member-list
         Member：
       %li.main-header__left-box__member-list__member
-    = link_to  "#" do
+    = link_to edit_group_path(@group) do
       .main-header__edit-btn Edit
   .messages
-    = render @messages
+    -# = render @messages
   .form
     %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/25224/messages", :enctype => "multipart/form-data", :method => "post"}
       .input-box
