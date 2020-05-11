@@ -2,10 +2,12 @@
   .main-header
     .main-header__left-box
       %h2.main-header__left-box__current-group{"data-group_id" => "25224"}
-        aa
+        = @group.name
       %ul.main-header__left-box__member-list
         Member：
-      %li.main-header__left-box__member-list__member
+        %li.main-header__left-box__member-list__member
+          - @group.users.each do |user|
+            = user.name
     = link_to edit_group_path(@group) do
       .main-header__edit-btn Edit
   .messages
@@ -18,6 +20,3 @@
           %i.far.fa-image
           %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
       %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
-
-
- 
