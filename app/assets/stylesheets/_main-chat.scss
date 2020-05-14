@@ -81,31 +81,47 @@ body{
   padding-top: 15px;
 }
 
+// messages in
 .messages{
   background-color: #fafafa;
   width:100%;
   height: calc(100vh - 190px);
+  padding: 35px 40px;
+ 
+ 
 }
 
 .message{
-  padding-left: 40px;
-  padding-top:46px;
+  padding-bottom: 46px;
+  
+  .upper-message{
+  display: flex;
+  margin-bottom: 12px;
+
+  &__user-name{
+    color: #333333;
+    font-size: 16px;
+    font-weight: bold;
 }
 
-.message__user{
-  order:1;
-  font-size: 16px;
-  font-weight: bold;
+  &__date{
+    width:600px;
+    left:50px;
+    bottom:45px;
+    font-size: 12px;
+    color: #999999;
+    margin-left: 10px;
+  }
 }
+}
+  .lower-message{
+    color:#434a54;
+    font-size: 14px;
+    
 
-.message__date{
-  position: relative;
-  width:600px;
-  left:50px;
-  bottom:45px;
-  font-size: 12px;
-  color: #999999;
+  }
 }
+// messages out
 
 .input-box__image__file {
   display: none;
@@ -128,9 +144,10 @@ input, textarea, select {
   background-color: #ddd;
 
   .new_message {
-    display: flex;
 }
-
+.form__mask{
+  display: flex;
+}
   .input-box__text {
     height: 50px;
     width: 100%;
@@ -142,9 +159,9 @@ input, textarea, select {
 
   .input-box__image {
     font-size: 1.3rem;
-    position: absolute;
+    position: relative;
     top: 10px;
-    right: 10px;
+    right: 40px;
     cursor: pointer;
   }
 
@@ -159,9 +176,9 @@ input, textarea, select {
 
   .input-box__image {
     font-size: 1.3rem;
-    position: absolute;
+    position: relative;
     top: 10px;
-    right: 10px;
+    right: 40px;
     cursor: pointer;
   }
 
@@ -186,6 +203,5 @@ input, textarea, select {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-}
 }
 }
