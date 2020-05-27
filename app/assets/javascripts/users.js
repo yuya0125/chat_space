@@ -18,6 +18,7 @@ $(function() {
     $("#user-search-result").append(html);
   }
   function addDeleteUser(name, id) {
+    console.log(name, id)
     let html = `
     <div class="chat-group-user clearfix" id="${id}">
       <p class="chat-group-user__name">${name}</p>
@@ -27,7 +28,7 @@ $(function() {
   }
   function addMember(userId) {
     let html = `<input value="${userId}" name="group[user_ids][]" type="hidden" id="group_user_ids_${userId}" />`;
-    $(`#${userId}`).append(html);
+    $(`${userId}`).append(html);
   }
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
@@ -56,8 +57,8 @@ $(function() {
   });
   $(document).on("click", ".chat-group-user__btn--add", function() {
     console.log
-    const userName = $(this).attr("data-user-name");
-    const userId = $(this).attr("data-user-id");
+    var userName = $(this).attr("data-user-name");
+    var userId = $(this).attr("data-user-id");
     $(this)
       .parent()
       .remove();
@@ -70,3 +71,5 @@ $(function() {
       .remove();
   });
 });
+
+

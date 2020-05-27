@@ -1,5 +1,6 @@
 $(function() {
   function addUser(user) {
+    console.log(user)
     let html = `
       <div class="chat-group-user clearfix">
         <p class="chat-group-user__name">${user.name}</p>
@@ -7,6 +8,7 @@ $(function() {
       </div>
     `;
     $("#user-search-result").append(html);
+    console.log(html)
   }
 
   function addNoUser() {
@@ -31,6 +33,7 @@ $(function() {
   }
   $("#user-search-field").on("keyup", function() {
     let input = $("#user-search-field").val();
+    console.log(input)
     $.ajax({
       type: "GET",
       url: "/users",
@@ -38,6 +41,7 @@ $(function() {
       dataType: "json"
     })
       .done(function(users) {
+        console.log(users)
         $("#user-search-result").empty();
 
         if (users.length !== 0) {

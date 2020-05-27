@@ -80,6 +80,10 @@ $('#new_message').on('submit', function(e){
     $('.messages').append(html);
     $('.messages').animate({ scrollTop: $('.messages')[0].scrollHeight});
     $('form')[0].reset();
+    $('.submit-btn').prop('disabled', false)
+  })
+  .always(function(){
+    $('.submit-btn').prop('disabled', false)
   })
 })
 
