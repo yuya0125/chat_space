@@ -82,7 +82,10 @@ $('#new_message').on('submit', function(e){
     $('form')[0].reset();
     $('.submit-btn').prop('disabled', false)
   })
-  .fall(function(){
+  .always(function(){
+    $('.submit-btn').prop('disabled', false)
+  })
+  .fail(function(){
     alert("メッセージ送信に失敗しました")
   });
 })
